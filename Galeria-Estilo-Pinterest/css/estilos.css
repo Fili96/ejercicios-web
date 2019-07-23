@@ -1,0 +1,136 @@
+body {
+      background: #fff;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center center;
+    }
+
+/* Tamaño de card */
+.grid-sizer,
+.grid-item {
+  width: 19.2%;
+}
+
+/* Espaciado de cards */
+.gutter-sizer {
+  width: 1%;
+}
+
+/* Config de Card */
+.grid-item {
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.grid-item img{
+ 	width: 100%;
+ 	height: 100%;
+}
+
+/* Config Overlay (cubierta de encimado) */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+/* Config elementos dentro de Overlay */
+
+.button {
+  position: absolute;
+  transition: opacity .35s ease;
+  left:0;
+  top: 10px;
+  margin: 0px auto;
+  opacity: 0;
+}
+
+.grid-item:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .3);
+}
+
+.grid-item:hover .button {
+  opacity: 1;
+}
+
+
+
+
+.puntero {
+    cursor: pointer;
+}
+
+
+/* Animaciones */
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+
+@media (max-width: 1199.98px){
+
+	.grid-sizer,
+	.grid-item {
+	  width: 24.25%;
+	}
+}
+
+@media (max-width: 991.98px){
+
+	.grid-sizer,
+	.grid-item {
+	  width: 32.66%;
+	}
+
+}
+
+@media (max-width: 767.98px){
+
+	.grid-sizer,
+	.grid-item {
+	  width: 49.5%;
+	}
+
+
+}
+
+@media (max-width: 575.98px){
+
+	.grid-sizer,
+	.grid-item {
+	  width: 100%;
+	}
+
+}
