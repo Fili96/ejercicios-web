@@ -1,0 +1,97 @@
+
+/*********** Contenedor de Menu **********/
+@media (min-width: 700px) {
+    .Menu {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       background: steelblue;
+    }
+}
+
+/*********** brand **********/
+
+.Menu_brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .5rem;
+    background: steelblue;
+}
+
+@media (min-width: 700px) {
+    .Menu_brand {
+       background: transparent;
+    }
+}
+
+/*********** boton **********/
+
+.Menu_boton {
+    display: block;
+    color: #000;
+    font-size: 35px;
+}
+
+@media (min-width: 700px) {
+    .Menu_boton {
+       display: none;
+    }
+}
+
+/*********** lista **********/
+
+.Menu_lista {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    visibility: hidden;
+    opacity: .2;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.Menu_lista.is-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (min-width: 700px) {
+    .Menu_lista {
+       visibility: visible;
+       opacity: 1;
+       flex-direction: row;
+       background: transparent;
+    }
+}
+
+/*********** item link **********/
+
+.Menu_item-link {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+@media (min-width: 700px) {
+    .Menu_item-link {
+       border-bottom: none;
+       margin-left: 10px;
+    }
+}
+
+.Menu_item-link:hover {
+    background: #fff;
+    color: #000;
+}
+
+.Menu_item-link:last-child {
+    border-bottom: none;
+}
+
+/*********** item  **********/
+
+.Menu_item {
+    font-size: 20px;
+}
